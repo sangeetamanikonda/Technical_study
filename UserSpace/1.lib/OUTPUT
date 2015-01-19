@@ -1,0 +1,30 @@
+
+Output
+******
+
+sangeetam@sangeetam-ThinkCentre-Edge72:~/Technical_study/UserSpace/1.lib$ make static_lib 
+gcc -c -o mean.o mean.c
+ar rcs libmean.a mean.o
+gcc -static main.c -L. -lmean -o static_test.o 
+./static_test.o
+
+ 10.340000
+sangeetam@sangeetam-ThinkCentre-Edge72:~/Technical_study/UserSpace/1.lib$ make dynamic_lib 
+gcc -fPIC mean.c -c -o mean.o 
+gcc -shared -Wl,-soname,libmean.so.1 -o libmean.so.1.0.1  mean.o
+LD_LIBRARY_PATH= .
+gcc main.c -o shared_test.o -L. -lmean 
+./shared_test.o	
+
+ 10.340000
+sangeetam@sangeetam-ThinkCentre-Edge72:~/Technical_study/UserSpace/1.lib$ make shared_lib 
+gcc -fPIC mean.c -c -o mean.o 
+gcc -shared -Wl,-soname,libmean.so.1 -o libmean.so.1.0.1  mean.o
+gcc main.c -o shared_test.o -L. -lmean
+./shared_test.o
+
+ 10.340000
+
+sangeetam@sangeetam-ThinkCentre-Edge72:~/Technical_study/UserSpace/1.lib$ make clean
+rm -rf *.o *.a *.so.*
+
