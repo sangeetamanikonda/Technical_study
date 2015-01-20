@@ -1,0 +1,15 @@
+
+Description
+-----------
+
+make:
+It will generate a executable file fork and execute
+
+OUTPUT:
+ Parent Process :  PID=10583
+ glb_var=100 lcl_var=200
+
+
+ Child process : PID=10584
+ glb_var=1 lcl_var=1
+
