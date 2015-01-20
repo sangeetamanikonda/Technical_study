@@ -2,6 +2,14 @@
 Output
 ******
 
+sangeetam@sangeetam-ThinkCentre-Edge72:~/Technical_study/UserSpace/1.lib$ make static_lib 
+gcc -c  mean.c
+ar rcs libmean.a mean.o
+gcc -static main.c -o static_test.o -L. -lmean 
+./static_test.o
+
+ 10.340000
+
 sangeetam@sangeetam-ThinkCentre-Edge72:~/Technical_study/UserSpace/1.lib$ make shared_lib 
 gcc -fpic -c mean.c
 gcc -shared -o libcalc.so mean.o
@@ -10,9 +18,4 @@ gcc main.c -o shared_test.o -L. -lcalc
 ./shared_test.o
 
  10.340000
-sangeetam@sangeetam-ThinkCentre-Edge72:~/Technical_study/UserSpace/1.lib$ make static_lib 
-gcc -c  mean.c
-ar rcs libmean.a mean.o
-gcc -static main.c -o static_test.o -L. -lmean 
-./static_test.o
 
