@@ -1,13 +1,14 @@
 CC = gcc
 CFLAGS = -o
-LIBFLAG= -lpthread
-TARGET = thread
+TARGET = thread 
+SRC = thread.c 
+LIBTHREAD = -lpthread 
 RM = rm -rf
 
 all: $(TARGET) 
 
-$(TARGET) : $(TARGET).c
-	$(CC) $(CFLAGS) $(TARGET) $(TARGET).c $(LIBFLAG)
+$(TARGET) : $(SRC)
+	$(CC) $(CFLAGS) $(TARGET) $(SRC) $(LIBTHREAD)
 	./$(TARGET)
 
 clean:
