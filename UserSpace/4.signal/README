@@ -1,0 +1,32 @@
+
+Description
+-----------
+ - Program deals with 3 cases SIG_DFL,SIG_IGN and registring with a handler.
+ - It consists of an alarm, before alarm expires signal SIGINT has default action.
+ - After alarm expires SIGINT is ignored. 
+
+Steps to run the program:
+-------------------------
+
+ 1. make
+ It will generate a executable file thread and execute.
+
+ 2. ./signal 
+ Run executable
+
+ 3. make clean
+ Removes executable file thread.
+
+
+OUTPUT
+-------
+
+./signal 
+ 	 Received SIG_ALRM
+
+^C
+^C
+^C
+^C
+^\Quit (core dumped)
+
