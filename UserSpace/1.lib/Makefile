@@ -3,9 +3,10 @@ CFLAGS=-c
 LDFLAGS=-static
 EXTRAFLAGS= -fpic -c
 SRC=main.c
-PWD='pwd'
+PWD=$(shell pwd)
 LIBSRC=mean.c
 LIBOBJ=mean.o
+RM= rm -rf
 
 static_lib:
 	$(CC) $(CFLAGS) $(LIBSRC)
@@ -16,11 +17,10 @@ static_lib:
 shared_lib:
 	$(CC) $(EXTRAFLAGS) $(LIBSRC)
 	$(CC) -shared -o libcalc.so $(LIBOBJ)
-	export LD_LIBRARY_PATH=$(PWD)
-	$(CC) $(SRC) -o shared_test.o -L. -lcalc 
+	$(CC) $(SRC) -o shared_test.o $(PWD)/libcalc.so 
 	./shared_test.o
 
 clean:
-	rm -rf *.o *.a *.so
+	$(RM) *.o *.a *.so
 	
  

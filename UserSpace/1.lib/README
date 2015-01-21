@@ -1,9 +1,9 @@
 Description
-***********
+-----------
+Mean is computed using static/dynamic library, variables are passed from the main/driver program.
 
 Steps for compilation
 ---------------------
-
 1. make static_lib
 To generate static library and run executable.
 
@@ -11,12 +11,10 @@ To generate static library and run executable.
 To generate shared library and run executable.
 
 3. make clean
-To remove and .o and .so files.
+To remove and .o, .a and .so files.
 
 
 Output
 ------
  Result: 
- a=10.340000  b=10.340000  Mean=10.340000
-
-
+ a=2.20  b=4.40  Mean=3.30
