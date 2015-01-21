@@ -1,0 +1,25 @@
+
+Description
+-----------
+ - Program creates 5 threads.
+ - Each thread increments global variable and uses mutex lock for synchronization.
+
+Steps to run the program:
+-------------------------
+
+ 1. make
+ It will generate a executable file thread and execute.
+
+ 2. make clean
+ Removes executable file thread.
+
+OUTPUT
+-------
+ glb_var=1  TID=47861715482368
+ glb_var=2  TID=47861717583616
+ glb_var=3  TID=47861713381120
+ glb_var=4  TID=47861719684864
+ glb_var=5  TID=47861721786112
+
+
+Note: TID(THREAD ID) will be different during each run.
