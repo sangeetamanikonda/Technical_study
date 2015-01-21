@@ -1,11 +1,23 @@
 
 Description
 -----------
+ - Program uses fork to create child process.
+ - Child process increments values of local and global variable.
+ - Parent process changes values of local and global variables to 200,100 respectively. 
+ - This program verifies that both processes have their own set of variables.
 
-make:
-It will generate a executable file fork and execute
+Steps to run the program:
+-------------------------
 
-OUTPUT:
+ 1. make
+ It will generate a executable file fork and execute.
+
+ 2. make clean
+ Removes executable file fork.
+
+OUTPUT
+-------
+
  Parent Process :  PID=10583
  glb_var=100 lcl_var=200
 
