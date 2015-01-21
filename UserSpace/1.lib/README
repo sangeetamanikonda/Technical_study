@@ -13,3 +13,10 @@ To generate shared library and run executable.
 3. make clean
 To remove and .o and .so files.
 
+
+Output
+------
+ Result: 
+ a=10.340000  b=10.340000  Mean=10.340000
+
+
