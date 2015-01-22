@@ -13,7 +13,7 @@ Steps to run the program:
  It will generate a executable file pipe_ex.
 
  2. ./pipe_ex
-   Run executable.  
+ To Run executable.  
 
  3. make clean
  Removes executable.
