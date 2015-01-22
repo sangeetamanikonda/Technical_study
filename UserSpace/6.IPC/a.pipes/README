@@ -1,0 +1,35 @@
+
+Description
+-----------
+ - Program consists of 2 process and communicate via 2 pipes. 
+ - Child process  : Writes message to parent and then reads message from parent.
+ - Parent process : Reads message from child and then writes message to parent.
+
+
+Steps to run the program:
+-------------------------
+
+ 1.  make
+ It will generate a executable file pipe_ex.
+
+ 2. ./pipe_ex
+   Run executable.  
+
+ 3. make clean
+ Removes executable.
+
+OUTPUT
+-------
+
+Enter length of message:(Child to parent) 
+2
+Enter message: (child to parent)
+hi
+Enter length of message:(Child to parent) 
+3
+Enter message: (parent to child)
+bye
+
+Parent process : hi 
+Child process : bye 
+
