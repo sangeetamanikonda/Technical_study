@@ -3,7 +3,7 @@ Description
 -----------
  - Program consists of 2 process and communicate via 2 pipes. 
  - Child process  : Writes message to parent and then reads message from parent.
- - Parent process : Reads message from child and then writes message to parent.
+ - Parent process : Reads message from child and then writes message to child.
 
 
 Steps to run the program:
