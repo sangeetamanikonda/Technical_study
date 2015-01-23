@@ -1,0 +1,35 @@
+
+Description
+-----------
+ - Program consists of send.c process and receive process communicate via message queue. 
+
+Steps to run the program:
+-------------------------
+
+ 1.  make
+ It will generate a executable file send and receive.
+
+ 2. ./send      //in one terminal and enter data
+    ./receive   //in other terminal
+
+ To Run executable.  
+
+
+ 3. make clean
+ Removes executable.
+
+OUTPUT
+-------
+
+//send section
+Enter lines of text, ^D to quit:
+Message from server.....
+I think you received my message....
+
+//Receive section
+Ready to receive messages.
+Received: "Message from server....."
+Received: "I think you received my message...."
+
+
+
