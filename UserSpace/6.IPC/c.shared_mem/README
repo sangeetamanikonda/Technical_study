@@ -1,0 +1,34 @@
+
+Description
+-----------
+ - Program has a server and client parts both of them get same piece of shared memory attach it to user space.
+ - Server writes into the shared memory and puts last character as NULL and waits till the first character is changed to '*' by client program.
+ - Client reads the region until NULL is encountered and then mdifies 1st character as '*'  
+
+Steps to run the program:
+-------------------------
+
+ 1.  make
+ It will generate a executable file server and client
+
+ 2. ./server      //in one terminal and enter data
+    ./client   //in other terminal
+
+ To Run executable.  
+
+ 3. make clean
+ Removes executable.
+
+OUTPUT
+-------
+
+//send section
+
+Server :  Writing into shared memory 
+
+//Receive section
+
+Client: Reading from shared memory 
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+
+
