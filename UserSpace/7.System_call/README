@@ -1,0 +1,34 @@
+
+Description
+-----------
+-Download and extract the kernel source
+-Define a new system call sys_hello()
+-Add the new system call (sys_hello() ) into the system call table (syscall_64.tbl file)
+-Add the hello directory to the kernel’s Makefile
+-Add the new system call(sys_hello())  in the system call header file.
+-Compile this kernel on your system.
+-Run userspace program dmesg to verify.
+
+Reference:
+https://tssurya.wordpress.com/2014/08/19/adding-a-hello-world-system-call-to-linux-kernel-3-16-0/
+
+Steps to run the program:
+-------------------------
+
+ 1.  make
+ It will generate a executable file user.
+
+ 2. ./user
+ To Run executable.  
+
+ 3. make clean
+ Removes executable.
+
+OUTPUT
+-------
+system call sys_hello returned 0
+
+dmesg
+-----
+[  748.576801] Hello World
+
