@@ -1,0 +1,19 @@
+Description
+-----------
+Mean and sum are computed using static library, variables are passed from the main/driver program.
+
+Steps for compilation
+---------------------
+1. make 
+To generate static library and run executable.
+
+2. make clean
+To remove .o, .a files.
+
+
+Output
+------
+ Result: 
+ a=2.20  b=4.40 
+ Mean=3.30
+ Sum=6.60 

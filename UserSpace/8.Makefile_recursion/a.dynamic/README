@@ -1,0 +1,20 @@
+Description
+-----------
+Mean and sum are computed using dynamic library, variables are passed from the main/driver program.
+
+Steps for compilation
+---------------------
+1. make 
+To generate shared library and run executable.
+
+3. make clean
+To remove .o and .so files.
+
+
+Output
+------
+ Result: 
+ a=2.20  b=4.40 
+ Mean=3.30
+ Sum=6.60 
+
