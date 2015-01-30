@@ -1,0 +1,22 @@
+Description
+-----------
+-Main folder consists of 2 subfolders a.static b.dynamic.Main makefile calls internal makefiles.
+-Mean and sum are computed using static & dynamic libraries, variables are passed from the main/driver program.
+
+Steps for compilation
+---------------------
+1. make 
+To generate static & dynamic library,run executables.
+
+2. make clean
+To remove .o, .a and .so files.
+
+
+Output
+------
+ Result: 
+ a=2.20  b=4.40  
+
+ Mean=3.30
+ Sum=6.60
+
