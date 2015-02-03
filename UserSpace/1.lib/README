@@ -10,10 +10,16 @@ To generate static & dynamic libraries and respective executables.
 2. make static_lib
 To generate static library and executable.
 
-3. make shared_lib
+3. ./static_lib.o
+To run executable.
+
+4. make shared_lib
 To generate shared library and executable.
 
-4. make clean
+5. ./shared_lib.o
+To run executable.
+
+6. make clean
 To remove and .o, .a and .so files.
 
 
