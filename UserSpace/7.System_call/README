@@ -26,9 +26,9 @@ Steps to run the program:
 
 OUTPUT
 -------
+1)Check on the terminal
 system call sys_hello returned 0
 
-dmesg
------
+2)Run command: dmesg
 [  748.576801] Hello World
 
