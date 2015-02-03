@@ -12,7 +12,10 @@ Steps to run the program:
  1. make
  It will generate a executable file fork.
 
- 2. make clean
+ 2. ./fork
+ To run executable file fork.
+
+ 3. make clean
  Removes executable file fork.
 
 OUTPUT
