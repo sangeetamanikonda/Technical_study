@@ -4,12 +4,13 @@ SRC   = signal.c
 TARGET= signal
 RM    = rm -rf
 
-all: signal
+all: $(TARGET)
+.PHONY:all
 
-signal : signal.c
-	$(CC) $(CFLAGS) $(TARGET) $(SRC)
-#	./$(TARGET)
+$(TARGET) : $(SRC)
+	$(CC) $(CFLAGS) $@ $<
 
+.PHONY:clean
 clean:
 	$(RM) $(TARGET)
 	
