@@ -1,0 +1,12 @@
+
+Steps for compilation
+---------------------
+1. make 
+To generate executables in all the subdirectories.
+
+2. make clean
+To remove all the binaries.
+
+3. Go to respective folders and run executables. (Please refer README inside each of the subdirectories.) 
+
+
