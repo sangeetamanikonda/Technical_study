@@ -7,9 +7,11 @@ Steps for compilation
 1. make 
 To generate static library and run executable.
 
-2. make clean
-To remove .o and .a files.
+2. ./static_lib.o
+To run executable.   
 
+3 make clean
+To remove .o and .a files.
 
 Output
 ------

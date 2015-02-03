@@ -14,7 +14,6 @@ all: staticlib
 staticlib: $(OBJS)
 	ar rcs $(LIB) $(OBJS)
 	$(CC) -static $(SRC) -o $@.o $(LIB)
-	./$@.o
 
 
 .PHONY: clean
