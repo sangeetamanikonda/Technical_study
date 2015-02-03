@@ -13,6 +13,11 @@ void ALRM_handler(int signo)
 
 int main(void)
 {
+
+  printf("\n - Program deals with 3 cases SIG_DFL,SIG_IGN and registring with a handler. \n");
+  printf(" - It consists of an alarm, before alarm expires signal SIGINT has default action. \n");
+  printf(" - After alarm expires SIGINT is ignored.\n");	
+
   //SIGINT default registration
   signal(SIGINT,SIG_DFL);
 
