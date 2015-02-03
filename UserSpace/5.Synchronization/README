@@ -10,11 +10,11 @@ Steps to run the program:
  1. make
  It will generate a executable file thread.
 
- 2. make clean
- Removes executable file thread.
-
- 3. ./thread
+ 2. ./thread
  Runs executable thread.
+
+ 3. make clean
+ Removes executable file thread.
 
 OUTPUT
 -------
