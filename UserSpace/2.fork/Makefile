@@ -4,10 +4,10 @@ TARGET = fork
 RM = rm -rf
 
 all: $(TARGET) 
+.PHONY:all
+$(TARGET) : $(TARGET).c 
+	$(CC) $(CFLAGS) $(TARGET) $?
 
-$(TARGET) : $(TARGET).c
-	$(CC) $(CFLAGS) $(TARGET) $(TARGET).c
-	./$(TARGET)
-
+.PHONY:clean
 clean:
 	$(RM) $(TARGET)
