@@ -6,10 +6,10 @@ LIBTHREAD = -lpthread
 RM = rm -rf
 
 all: $(TARGET) 
+.PHONY: all
+$(TARGET) : $(SRC) 
+	$(CC) $(CFLAGS) $@ $< $(LIBTHREAD)
 
-$(TARGET) : $(SRC)
-	$(CC) $(CFLAGS) $(TARGET) $(SRC) $(LIBTHREAD)
-	./$(TARGET)
-
+.PHONY:clean
 clean:
 	$(RM) $(TARGET)
