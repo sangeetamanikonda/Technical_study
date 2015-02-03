@@ -6,10 +6,12 @@ Description
 Steps for compilation
 ---------------------
 1. make 
-To generate static & dynamic library,run executables.
+To generate static & dynamic library and  executables.
 
 2. make clean
 To remove .o, .a and .so files.
+
+3. Go to respective folders and run executables. (Please refer README inside.) 
 
 
 Output
