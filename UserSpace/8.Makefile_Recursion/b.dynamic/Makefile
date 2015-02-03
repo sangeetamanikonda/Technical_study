@@ -15,7 +15,6 @@ all: dynamiclib
 dynamiclib: $(OBJS)
 	$(CC) -shared -o $(LIB) $(OBJS)
 	$(CC) $(SRC) -o $@.o $(LIBPATH) 
-	./$@.o
 
 .PHONY: clean
 

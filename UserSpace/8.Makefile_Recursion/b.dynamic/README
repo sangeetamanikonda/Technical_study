@@ -5,10 +5,13 @@ Mean and sum are computed using dynamic library, variables are passed from the m
 Steps for compilation
 ---------------------
 1. make 
-To generate dynamic library and run executable.
+To generate dynamic library and executable.
 
 2. make clean
 To remove .o and .so files.
+
+3. ./dynamiclib.o
+To run executable.
 
 
 Output
