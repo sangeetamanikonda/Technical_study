@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -o
-TARGET = thread 
-SRC = thread.c 
+TARGET = counting_sem 
+SRC = counting_sem.c 
 LIBTHREAD = -lpthread 
 RM = rm -rf
 

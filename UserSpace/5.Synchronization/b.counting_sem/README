@@ -1,0 +1,35 @@
+
+Description
+-----------
+-For producer consumer program: two semaphores, one for buffer full, and one for buffer empty. 
+-Each time a producer queues an element into buffer, the producer posts to the empty buffer semaphore.
+-This will increment its value, and if it were 0 it would wake up consumer threads waiting on that semaphore. 
+ The consumer thread that waits on that semaphore, upon waking up it will decrement the value of the semaphore.
+ So empty buffer semaphore basically follows up with the buffer index.
+-The full buffer semaphore does the opposite. Consumer threads post to it when they dequeue from the buffer, which increments the semaphore value. 
+ And producer threads wait in them, which means they sleep if buffer is full, and decrement the semaphore value each time they add element to buffer.
+-A mutex is used to protect access to buffer.
+
+Steps to run the program:
+-------------------------
+
+ 1. make
+ It will generate a executable file.
+
+ 2. ./binary_sem
+ Runs executable thread.
+
+ 3. make clean
+ Removes executable file.
+
+OUTPUT
+-------
+Producer 0 added 77 to buffer
+Consumer 1 dequeue 77 from buffer
+Producer 2 added 93 to buffer
+Consumer 3 dequeue 93 from buffer
+Producer 0 added 86 to buffer
+Consumer 1 dequeue 86 from buffer
+Producer 2 added 92 to buffer
+Consumer 3 dequeue 92 from buffer
+

@@ -8,13 +8,13 @@ Steps to run the program:
 -------------------------
 
  1. make
- It will generate a executable file thread.
+ It will generate a executable file.
 
- 2. ./thread
+ 2. ./binary_sem
  Runs executable thread.
 
  3. make clean
- Removes executable file thread.
+ Removes executable file.
 
 OUTPUT
 -------
