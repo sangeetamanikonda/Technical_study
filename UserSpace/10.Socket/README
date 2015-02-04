@@ -1,0 +1,27 @@
+
+Description
+-----------
+ - Program consists of server and client.
+ - Server sends "helloworld" to client and client prints the message.	
+
+Steps to run the program:
+-------------------------
+
+ 1. make
+ It will generate executables
+
+ 2. ./server
+    ./client
+ Run executable
+
+ 3. make clean
+ Removes executables.
+
+
+OUTPUT
+-------
+[1] 4083
+Listening
+Data received: Hello World
+[1]+  Done                    ./server
+
