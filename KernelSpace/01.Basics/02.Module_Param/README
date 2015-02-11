@@ -1,0 +1,43 @@
+Description
+-----------
+-Program takes command line arguments of types: int,char pointer, short and array.
+-It prints values of global variables in init module and if arguments  are not passed prints default values.
+-When module is removed, it prints "Bye bye".
+
+Steps for compilation
+---------------------
+1.a)make 
+  To generate kernel module.
+
+Or,
+
+  b)make modules 
+  To generate kernel module.
+
+2. insmod module_param.ko myint=1 myshort=2 mychar="sangeeta" myarray=12,23,34,45
+   To insert module_param.ko module along with command line arguments.
+
+3. rmmod module_param
+   To remove module_param.ko module.
+
+4. make clean
+To remove .ko file.
+
+Note: Run dmesg : To see log messages.
+
+Output
+------
+
+1) When module is inserted.
+[69551.247459] module_param_init : myint=1
+[69551.247465] module_param_init : myshort=2
+[69551.247467] module_param_init : mychar=sangeeta
+[69551.247469] module_param_init : myarray[2]=34
+
+2) When module is removed.
+[69608.509953] module_param_exit : Bye bye
+
+
+
+
+
