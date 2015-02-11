@@ -1,0 +1,1 @@
+cmd_/home/sangeeta/Kernel_space/01.Basics/01.Hello_World/hello.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.13.0-32-generic/scripts/module-common.lds --build-id  -o /home/sangeeta/Kernel_space/01.Basics/01.Hello_World/hello.ko /home/sangeeta/Kernel_space/01.Basics/01.Hello_World/hello.o /home/sangeeta/Kernel_space/01.Basics/01.Hello_World/hello.mod.o
