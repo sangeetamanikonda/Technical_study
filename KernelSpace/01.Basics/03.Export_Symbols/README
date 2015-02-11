@@ -1,0 +1,46 @@
+Description
+-----------
+-Program takes command line arguments from main.ko module.
+-Adds using add.ko module that exports symbol so that it can be called from driver program.
+
+Steps for compilation
+---------------------
+1.a)make 
+  To generate kernel modules.
+
+Or,
+
+  b)make modules 
+  To generate kernel modules.
+
+Note: Check module parameters to be passed using: modinfo main.ko
+-----
+
+2. insmod add.ko main.ko a=10 b=20
+   To insert .ko modules along with command line arguments.
+
+3. rmmod main add
+   To remove .ko modules.
+
+4. make clean
+To remove .ko file.
+
+Note: Run dmesg : To see log messages.
+
+Output
+------
+
+1) When module is inserted.
+[81881.848623] add_init :
+[81881.848623]  <6>[81889.336423] main_init : add=30
+
+
+2) When module is removed.
+[81904.776040] main_exit : Bye bye
+[81904.776337] 
+[81904.776337] add_exit : Bye bye
+
+
+
+
+
