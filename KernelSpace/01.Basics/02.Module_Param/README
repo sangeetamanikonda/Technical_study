@@ -14,7 +14,10 @@ Or,
   b)make modules 
   To generate kernel module.
 
-2. insmod module_param.ko myint=1 myshort=2 mychar="sangeeta" myarray=12,23,34,45
+Note: Check module parameters to be passed using: modinfo module_param.ko
+-----
+
+2. insmod module_param.ko myint=1 myshort=2 mychar="sangeeta" myarray=12,23,34,45 mylong=10000
    To insert module_param.ko module along with command line arguments.
 
 3. rmmod module_param
@@ -29,13 +32,14 @@ Output
 ------
 
 1) When module is inserted.
-[69551.247459] module_param_init : myint=1
-[69551.247465] module_param_init : myshort=2
-[69551.247467] module_param_init : mychar=sangeeta
-[69551.247469] module_param_init : myarray[2]=34
+[72090.148935] module_param_init : myint=1
+[72090.148939] module_param_init : myshort=2
+[72090.148940] module_param_init : mylong=10000
+[72090.148941] module_param_init : mychar=sangeeta
+[72090.148942] module_param_init : myarray[2]=34
 
 2) When module is removed.
-[69608.509953] module_param_exit : Bye bye
+[72156.475473] module_param_exit : Bye bye
 
 
 

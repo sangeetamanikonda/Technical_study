@@ -7,10 +7,11 @@
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Sangeeta Manikonda");
-MODULE_DESCRIPTION("Hello World program");
+MODULE_DESCRIPTION("Module Parameters program");
 
 static int myint=10;
 static short myshort=100;
+static long mylong=101;
 static char *mychar="sang";
 static int myarray[ARR_INDEX]={1,2,3,4};
 static int index=ARR_INDEX;
@@ -20,7 +21,8 @@ static int __init module_param_init(void)
 {
   //Print all module parameters values
   printk(KERN_INFO "module_param_init : myint=%d\n",myint);
-  printk(KERN_INFO "module_param_init : myshort=%d\n",myshort);
+  printk(KERN_INFO "module_param_init : myshort=%hd\n",myshort);
+  printk(KERN_INFO "module_param_init : mylong=%ld\n",mylong);
   printk(KERN_INFO "module_param_init : mychar=%s\n",mychar);
   printk(KERN_INFO "module_param_init : myarray[2]=%d\n",myarray[2]);
   return 0;
@@ -40,6 +42,10 @@ static void __exit module_param_exit(void)
  MODULE_PARM_DESC(myshort, "Short Value");  
  module_param(myshort,short,S_IRUGO);          
 
+ //Module parameter : mylong
+ MODULE_PARM_DESC(myshort, "Long Value");  
+ module_param(mylong,long,S_IRUGO);      
+    
  //Module parameter : mychar
  MODULE_PARM_DESC(mychar, "Char pointer Value");
  module_param(mychar,charp,S_IRUGO);
