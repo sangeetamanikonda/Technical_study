@@ -16,7 +16,8 @@ Or,
 Note: Check module parameters to be passed using: modinfo main.ko
 -----
 
-2. insmod add.ko main.ko a=10 b=20
+2. insmod add.ko 
+   insmod main.ko a=10 b=20
    To insert .ko modules along with command line arguments.
 
 3. rmmod main add
