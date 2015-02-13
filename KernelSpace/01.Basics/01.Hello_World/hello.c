@@ -9,14 +9,14 @@ MODULE_DESCRIPTION("Hello World program");
 //init module: Function called when module is inserted
 static int __init hello_init(void)
 {
-  printk(KERN_INFO "hello_init : Hello World\n");
-  return 0;
+	printk(KERN_INFO "hello_init : Hello World\n");
+	return 0;
 }
 
 //exit module: Function called when module is removed
 static void __exit hello_exit(void)
 {
-  printk(KERN_INFO "hello_exit : Bye bye\n");
+	printk(KERN_INFO "hello_exit : Bye bye\n");
 }
 
 module_init(hello_init); //MACRO called first after inserting module 
