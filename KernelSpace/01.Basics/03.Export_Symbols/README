@@ -1,11 +1,16 @@
 Description
 -----------
--Program takes command line arguments from main.ko module.
--Adds using add.ko module that exports symbol so that it can be called from driver program.
+-Program has main.ko as the main driver module.It takes command line arguments (int) a,b.
+-Driver module:(main.ko)
+ a) Adds using kern_add.ko module.
+ b) subtracts using kern_sub.ko module.
+ c) Multiplies using kern_mul.ko module.
+
+ Each of the submodules export symbols so that they can be called from the main module.
 
 Steps for compilation
 ---------------------
-1.a)make 
+1.a)make // (all: clean modules install )
   To generate kernel modules.
 
 Or,
@@ -13,18 +18,29 @@ Or,
   b)make modules 
   To generate kernel modules.
 
+  make install
+  To sort dependencies that can be used by modprobe. 		
+
 Note: Check module parameters to be passed using: modinfo main.ko
 -----
 
-2. insmod add.ko 
-   insmod main.ko a=10 b=20
+2. insmod kern_add.ko 
+   insmod kern_sub.ko
+   insmod kern_mul.ko
+   insmod main.ko a=50 b=10
+   To insert .ko modules along with command line arguments.
+
+Or,
+   modprobe main a=50 b=10 //Sorts dependency by its own
    To insert .ko modules along with command line arguments.
 
 3. rmmod main add
    To remove .ko modules.
+Or,
+   modprobe -r main
 
 4. make clean
-To remove .ko file.
+To remove .ko files.
 
 Note: Run dmesg : To see log messages.
 
@@ -32,16 +48,21 @@ Output
 ------
 
 1) When module is inserted.
-[81881.848623] add_init :
-[81881.848623]  <6>[81889.336423] main_init : add=30
 
+[10730.096052] sub_init : 
+[10730.096230] mul_init : 
+[10730.096379] add_init : 
+[10730.096531] 
+[10730.096531] main_init : sum=60
+[10730.096535] main_init : diff=40
+[10730.096536] main_init : sum=500
 
 2) When module is removed.
-[81904.776040] main_exit : Bye bye
-[81904.776337] 
-[81904.776337] add_exit : Bye bye
 
-
+[10735.407500] main_exit : Bye 
+[10735.407771] sub_exit : Bye 
+[10735.407929] mul_exit : Bye 
+[10735.408049] add_exit : Bye 
 
 
 
