@@ -20,18 +20,18 @@ static int index=ARR_INDEX;
 static int __init module_param_init(void)
 {
   //Print all module parameters values
-  printk(KERN_INFO "module_param_init : myint=%d\n",myint);
-  printk(KERN_INFO "module_param_init : myshort=%hd\n",myshort);
-  printk(KERN_INFO "module_param_init : mylong=%ld\n",mylong);
-  printk(KERN_INFO "module_param_init : mychar=%s\n",mychar);
-  printk(KERN_INFO "module_param_init : myarray[2]=%d\n",myarray[2]);
-  return 0;
+	printk(KERN_INFO "module_param_init : myint=%d\n",myint);
+	printk(KERN_INFO "module_param_init : myshort=%hd\n",myshort);
+	printk(KERN_INFO "module_param_init : mylong=%ld\n",mylong);
+	printk(KERN_INFO "module_param_init : mychar=%s\n",mychar);
+	printk(KERN_INFO "module_param_init : myarray[2]=%d\n",myarray[2]);
+	return 0;
 }
 
 //exit module: Function called when module is removed
 static void __exit module_param_exit(void)
 {
-  printk(KERN_INFO "module_param_exit : Bye bye\n");
+	printk(KERN_INFO "module_param_exit : Bye bye\n");
 }
 
  //Module parameter description used in modinfo : myint
