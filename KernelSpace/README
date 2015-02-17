@@ -1,35 +1,11 @@
 Description
 -----------
--Program prints "Hello World" when module is inserted.
--When module is removed prints "Bye bye".
+Folder 01.Basics consists of programs:
 
-Note: Doesn't print on console check /var/log/messages or dmesg
-
-Steps for compilation
----------------------
-1.a)make 
-  To generate kernel module.
-
-Or,
-
-  b)make modules 
-  To generate kernel module.
-
-2. insmod hello.ko
-   To insert hello.ko module.
-
-3. rmmod hello
-   To remove hello.ko module.
-
-4. make clean
-To remove .ko file.
-
-Note: Run dmesg : To see log messages.
-
-Output
-------
-[60591.552286] hello_init : Hello World
-[60967.110462] hello_exit : Bye bye
+01.Hello_World          // Minimal kernel program that prints hello world and bye...
+02.Module_Param         // Program to demonstrate command line parameters in kernel space.
+03.Export_Symbols       // Program to demonstrate sharing of symbols by multiple modules \	
+			// in same and multiple directories.
 
 
 
