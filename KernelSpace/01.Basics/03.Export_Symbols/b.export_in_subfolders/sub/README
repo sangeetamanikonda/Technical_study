@@ -1,0 +1,34 @@
+Description
+-----------
+-Program has main.ko as the main driver module.It takes command line arguments (int) a,b.
+-Subtraction  module:(kern_sub.ko)
+ main.ko (driver module) subtracts using kern_sub.ko module.
+
+ Each of the submodules export symbols so that they can be called from the main module.
+
+Steps for compilation
+---------------------
+1.make
+  To generate kernel module.
+
+2.
+   insmod sub/src/kern_sub.ko
+   To insert .ko module.
+
+3. rmmod kern_sub 
+   To remove .ko module.
+
+4. make clean
+To remove .ko file.
+
+Note: Run dmesg : To see log messages.
+
+Output
+------
+
+1) When modules are inserted.
+[ 5911.516102] sub_init : 
+
+2) When modules are removed.
+[ 7851.157117] sub_exit : Bye 
+

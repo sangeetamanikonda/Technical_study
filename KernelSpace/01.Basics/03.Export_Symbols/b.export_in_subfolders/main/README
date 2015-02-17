@@ -1,0 +1,58 @@
+Description
+-----------
+-Program has main.ko as the main driver module.It takes command line arguments (int) a,b.
+-Driver module:(main.ko)
+ a) Adds using kern_add.ko module.
+ b) subtracts using kern_sub.ko module.
+ c) Multiplies using kern_mul.ko module.
+
+ Each of the submodules export symbols so that they can be called from the main module.
+
+Steps for compilation
+---------------------
+1.make
+  To generate kernel modules.
+
+Note: Check module parameters to be passed using: modinfo main.ko
+-----
+
+2. insmod add/src/kern_add.ko 
+   insmod sub/src/kern_sub.ko
+   insmod mul/src/kern_mul.ko
+   insmod main.ko a=50 b=10
+   To insert .ko modules along with command line arguments.
+
+3. rmmod main kern_add kern_sub kern_mul
+   To remove .ko modules.
+
+4. make clean
+To remove .ko files.
+
+Note: Run dmesg : To see log messages.
+
+Output
+------
+
+1) When modules are inserted.
+
+[ 5875.852912] add_init : 
+[ 5911.516102] 
+[ 5911.516102] sub_init : 
+[ 5911.516102] mul_init : 
+[ 7716.672022] 
+[ 7716.672022] main_init : sum=20
+[ 7716.672025] 
+[ 7716.672025] main_init : diff=0
+[ 7716.672026] 
+[ 7716.672026] main_init : mul=100
+
+2) When modules are removed.
+
+[ 7851.156595] main_exit : Bye 
+[ 7851.156844] mul_exit : Bye 
+[ 7851.156986] add_exit : Bye 
+[ 7851.157117] sub_exit : Bye 
+
+
+Note: Run make in the parent directory, Makefile actually calls the subfolder makefiles.
+----

@@ -1,0 +1,31 @@
+Dscription
+-----------
+-Program has main.ko as the main driver module.It takes command line arguments (int) a,b.
+-Multiplication module:(kern_mul.ko)
+ main.ko (driver program) multiplies using kern_mul.ko module.
+
+ Each of the submodules export symbols so that they can be called from the main module.
+
+Steps for compilation
+---------------------
+1.make
+  To generate kernel module.
+   insmod mul/src/kern_mul.ko
+
+3. rmmod kern_mul
+   To remove .ko module.
+
+4. make clean
+To remove .ko file.
+
+Note: Run dmesg : To see log messages.
+
+Output
+------
+
+1) When module is inserted.
+[ 5911.516102] mul_init : 
+
+2) When module is removed.
+[ 7851.156844] mul_exit : Bye 
+
