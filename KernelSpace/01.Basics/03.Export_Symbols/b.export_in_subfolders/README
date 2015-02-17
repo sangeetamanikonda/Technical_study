@@ -19,7 +19,7 @@ Note: Check module parameters to be passed using: modinfo main.ko
 2. insmod add/src/kern_add.ko 
    insmod sub/src/kern_sub.ko
    insmod mul/src/kern_mul.ko
-   insmod main.ko a=50 b=10
+   insmod main.ko a=10 b=10
    To insert .ko modules along with command line arguments.
 
 3. rmmod main kern_add kern_sub kern_mul
