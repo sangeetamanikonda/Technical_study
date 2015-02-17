@@ -1,0 +1,10 @@
+Description
+-----------
+This Folder 03.Export_Symbols consists of 2 programs:
+
+a.export_in_same_folder      //main or driver program uses symbols exported by modules in same directory.
+b.export_in_subfolders       //main or driver program uses symbols exported by modules in different sub-directories.
+
+
+
+
