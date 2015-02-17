@@ -1,9 +1,9 @@
 #include<linux/kernel.h>
 #include<linux/module.h>
 #include<linux/init.h>
-#include"../include/kern_add.h"
-#include"../include/kern_sub.h"
-#include"../include/kern_mul.h"
+#include "kern_add.h"
+#include"kern_sub.h"
+#include"kern_mul.h"
 
 MODULE_DESCRIPTION("Driver Program");
 MODULE_AUTHOR("Sangeeta Manikonda");
