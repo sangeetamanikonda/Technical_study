@@ -7,7 +7,7 @@ all: default
 .PHONY: all
 
 default:
-	for n in $(SUBDIRS); do $(MAKE) $$n modules; done;
+	for n in $(SUBDIRS); do $(MAKE) $$n all; done;
 
 .PHONY: clean 
 clean: 

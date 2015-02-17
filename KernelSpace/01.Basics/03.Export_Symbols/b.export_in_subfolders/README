@@ -10,7 +10,7 @@ Description
 
 Steps for compilation
 ---------------------
-1.make
+1.make(clean modules install)
   To generate kernel modules.
 
 Note: Check module parameters to be passed using: modinfo main.ko
@@ -20,10 +20,16 @@ Note: Check module parameters to be passed using: modinfo main.ko
    insmod sub/src/kern_sub.ko
    insmod mul/src/kern_mul.ko
    insmod main.ko a=10 b=10
+
+or,
+   modprobe main
+
    To insert .ko modules along with command line arguments.
 
 3. rmmod main kern_add kern_sub kern_mul
    To remove .ko modules.
+Or,
+   modprobe -r main
 
 4. make clean
 To remove .ko files.
