@@ -3,17 +3,17 @@ MAKE_CLEAN=make clean -C
 PWD=$(shell pwd)
 
 #PATH of subdirectories each containing Makefiles
-LIBPATH=$(PWD)/1.lib
-FORKPATH=$(PWD)/2.fork
-THREADPATH=$(PWD)/3.thread
-SIGNALPATH=$(PWD)/4.signal
-BINSYNCPATH=$(PWD)/5.Synchronization/a.binary_sem
-COUNTSYNCPATH=$(PWD)/5.Synchronization/b.counting_sem
-PIPEPATH=$(PWD)/6.IPC/a.pipes
-MESSQPATH=$(PWD)/6.IPC/b.messagequeue
-SHAREDMEMPATH=$(PWD)/6.IPC/c.shared_mem
-SYSCALLPATH=$(PWD)/7.System_call
-RECPATH= $(shell pwd)/8.Makefile_Recursion
+LIBPATH=$(PWD)/01.lib
+FORKPATH=$(PWD)/02.fork
+THREADPATH=$(PWD)/03.thread
+SIGNALPATH=$(PWD)/04.signal
+BINSYNCPATH=$(PWD)/05.Synchronization/a.binary_sem
+COUNTSYNCPATH=$(PWD)/05.Synchronization/b.counting_sem
+PIPEPATH=$(PWD)/06.IPC/a.pipes
+MESSQPATH=$(PWD)/06.IPC/b.messagequeue
+SHAREDMEMPATH=$(PWD)/06.IPC/c.shared_mem
+SYSCALLPATH=$(PWD)/07.System_call
+RECPATH= $(shell pwd)/08.Makefile_Recursion
 SOCKETPATH= $(shell pwd)/10.Socket
 
 #make will call Makefile of each of the sub directories
